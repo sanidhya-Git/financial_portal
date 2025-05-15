@@ -18,7 +18,7 @@ export const SearchBar: React.FC = () => {
         });
 
         const data = await res.json();
-        alert(data.reply); // You could replace this with modal or inline result
+        alert(data.reply);
       } catch (err) {
         console.error('Search error:', err);
         alert('Something went wrong.');

@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Briefcase, Menu, X } from 'lucide-react';
 import { Market } from './Market';
-import { SearchBar } from './searchbar';
+import { SearchBar } from './searchBar';
+
 
 
 const Navbar: React.FC = () => {
@@ -26,8 +27,8 @@ const Navbar: React.FC = () => {
             <span className="text-xl font-bold text-gray-900">FinancePort</span>
           </Link>
 
-          {/* Desktop Search */}
-          <div className="hidden md:flex flex-1 justify-center px-4">
+          {/* Search */}
+          <div className="flex-1 px-4 md:px-0">
             <SearchBar />
           </div>
 
@@ -70,10 +71,6 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden flex flex-col space-y-2 py-4">
-            <div className="px-4">
-              <SearchBar />
-            </div>
-
             <Market />
             {links.map((link) => (
               <Link
@@ -93,3 +90,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
