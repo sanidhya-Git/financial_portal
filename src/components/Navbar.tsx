@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, Menu, X } from 'lucide-react';
+import { Market } from './Market';
 import { SearchBar } from './searchBar';
+
+
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,6 +18,7 @@ const Navbar: React.FC = () => {
     { path: '/services', label: 'Services' },
     { path: '/contact', label: 'Contact' },
     { path: '/stocks', label: 'Stocks' },
+
   ];
 
   return (
@@ -34,6 +38,7 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-10">
+            <Market />
             {links.map((link) => (
               <Link
                 key={link.path}
@@ -78,6 +83,7 @@ const Navbar: React.FC = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
+              <Market />
               {links.map((link) => (
                 <Link
                   key={link.path}
@@ -97,3 +103,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+

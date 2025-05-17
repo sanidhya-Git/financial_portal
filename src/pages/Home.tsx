@@ -1,7 +1,3 @@
-"use clent";
-
-// import { useState, useEffect } from 'react';
-
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, LineChart, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';

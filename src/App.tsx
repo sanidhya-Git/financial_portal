@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/contact';
-import Stocks from './pages/stocks';
+import Stocks from './pages/Stocks';
 
 
 function App() {
